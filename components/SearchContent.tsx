@@ -7,6 +7,6 @@ export default function SearchContent() {
   const searchParams = useSearchParams();
   const query = searchParams.get("domain") || "";
 
-  // updateURL=false → URL change হবে না
+  // এখানে updateURL=false → URL change হবে না
   return <DomainSearch initialQuery={query} updateURL={false} />;
 }

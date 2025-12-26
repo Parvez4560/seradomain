@@ -20,11 +20,12 @@ export default function DomainSearch({
     if (!query.trim()) return;
 
     if (updateURL) {
+      // নতুন search করার জন্য URL push
       router.push(`/search?domain=${encodeURIComponent(query)}`);
     } else {
-      // এখানে শুধু value নিয়ে কাজ হবে
+      // শুধু value ব্যবহার হবে, URL change হবে না
       console.log("Search value used:", query);
-      // পরবর্তী processing বা ডোমেইন চেক এখানে করতে পারেন
+      // এখানে আপনি পরবর্তী কাজ করতে পারবেন
     }
   };
 

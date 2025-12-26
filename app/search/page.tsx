@@ -12,7 +12,7 @@ export default function SearchPage() {
         <Navbar />
       </div>
 
-      {/* Search box */}
+      {/* Search content */}
       <main className="flex-1 p-6 flex flex-col items-center">
         <SearchContent />
       </main>
