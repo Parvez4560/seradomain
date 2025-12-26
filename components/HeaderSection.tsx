@@ -42,11 +42,11 @@ export default function HeaderSection() {
            className="bg-[var(--main-color-2)] px-6 py-3 flex items-center justify-center transition-colors hover:bg-[var(--main-color-1)]"
           >
           <Image
-           src="/search.svg"
+           src="/interface-icons/search.svg"
            alt="Search"
-           width={25} // আইকনের সাইজ
+           width={25}
            height={25}
-           className="filter brightness-0 invert" // আইকনকে ব্লাড/ডার্ক করতে
+           className="filter brightness-0 invert"
           />
           </button>
         </div>

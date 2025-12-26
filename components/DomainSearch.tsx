@@ -52,7 +52,7 @@ export default function DomainSearch({
           className="bg-[var(--main-color-2)] px-5 py-3 flex items-center justify-center transition-colors hover:bg-[var(--main-color-1)]"
         >
           <Image
-            src="/search.svg"
+            src="/interface-icons/search.svg"
             alt="Search"
             width={25}
             height={25}
