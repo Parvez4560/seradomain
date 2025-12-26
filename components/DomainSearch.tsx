@@ -6,15 +6,25 @@ import Image from "next/image";
 
 interface Props {
   initialQuery?: string;
+  updateURL?: boolean; // default true
 }
 
-export default function DomainSearch({ initialQuery = "" }: Props) {
+export default function DomainSearch({
+  initialQuery = "",
+  updateURL = true,
+}: Props) {
   const [query, setQuery] = useState(initialQuery);
   const router = useRouter();
 
   const handleSearch = () => {
-    if (query.trim()) {
+    if (!query.trim()) return;
+
+    if (updateURL) {
       router.push(`/search?domain=${encodeURIComponent(query)}`);
+    } else {
+      // এখানে শুধু value নিয়ে কাজ হবে
+      console.log("Search value used:", query);
+      // পরবর্তী processing বা ডোমেইন চেক এখানে করতে পারেন
     }
   };
 
