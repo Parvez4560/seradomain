@@ -43,7 +43,7 @@ export default function DomainSearch({ initialQuery = "" }: Props) {
           <Image
             src="/search.svg"
             alt="Search"
-            width={25} // এখানে আইকন সাইজ
+            width={25}
             height={25}
             className="filter brightness-0 invert"
           />
