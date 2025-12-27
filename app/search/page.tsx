@@ -3,7 +3,6 @@
 import Navbar from "../../components/Navbar";
 import FooterSection from "../../components/FooterSection";
 import SearchContent from "../../components/SearchContent";
-import DomainCardProps from "../../components/DomainCardProps";
 import { Suspense } from "react";
 
 export default function SearchPage() {
@@ -16,7 +15,6 @@ export default function SearchPage() {
       <main className="flex-1 p-6 flex flex-col items-center">
         <Suspense fallback={null}>
           <SearchContent />
-          <DomainCardProps />
         </Suspense>
       </main>
 
