@@ -47,9 +47,11 @@ export default function SlideMenu({ open, onClose }: Props) {
         {/* Header */}
         <div className="flex items-center justify-between border-b border-[var(--main-color-2)] px-6 py-4">
           <h3 className="text-lg font-semibold">Menu</h3>
-          <button onClick={handleClose} className="text-xl font-bold">
-            ✕
-          </button>
+            <button onClick={handleClose} className="p-2">
+              <img src="/interface-icons/cross.svg"
+                alt="Close"
+                className="w-5 h-5" />
+            </button>
         </div>
 
         {/* Menu Items */}

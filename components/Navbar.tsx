@@ -25,13 +25,18 @@ export default function Navbar() {
             </span>
           </div>
 
-          {/* Right: Menu Icon */}
           <button
             onClick={() => setMenuOpen(true)}
-            className="text-2xl font-bold text-[var(--foreground)] hover:text-[var(--main-color-2)]"
+            className="flex items-center justify-center w-8 h-8 hover:opacity-90"
             aria-label="Open Menu"
           >
-            ☰
+            <Image
+              src="/interface-icons/menu-burger.svg"
+              alt="Menu"
+              width={24}
+              height={24}
+              className=""
+            />
           </button>
         </div>
       </nav>
