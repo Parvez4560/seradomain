@@ -34,7 +34,7 @@ export default function DomainSearch({
   };
 
   return (
-    <div className="w-full max-w-xl mx-auto">
+    <div className="w-full max-w-xl mx-auto bg-[var(--background)]">
       <div className="flex rounded-md overflow-hidden border border-gray-300 dark:border-gray-600 shadow-md">
         {/* Input field */}
         <input
