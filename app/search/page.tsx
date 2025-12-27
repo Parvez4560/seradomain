@@ -7,7 +7,7 @@ import { Suspense } from "react";
 
 export default function SearchPage() {
   return (
-    <div className="font-sans bg-white dark:bg-black min-h-screen flex flex-col">
+    <div className="font-sans bg-white dark:[color:#101727] min-h-screen flex flex-col">
       <div className="sticky top-0 z-50">
         <Navbar />
       </div>

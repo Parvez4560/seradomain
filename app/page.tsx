@@ -13,8 +13,8 @@ export default function Home() {
       </div>
 
       {/* বাকি কনটেন্ট */}
-      <HeaderSection />
-      <FeaturesSection />
+        <HeaderSection />
+        <FeaturesSection />
       <FooterSection />
     </div>
   );
