@@ -38,7 +38,7 @@ export default function DomainSearch({ initialQuery = "", updateURL = true, onSe
         />
         <button
           onClick={handleSearch}
-          className="bg-[var(--main-color-2)] px-5 py-3 flex items-center justify-center transition-colors hover:bg-[var(--main-color-1)]"
+          className="bg-[var(--main-color-1)] px-5 py-3 flex items-center justify-center transition-colors hover:bg-[var(--main-color-1)]"
         >
           <Image
             src="/interface-icons/search.svg"

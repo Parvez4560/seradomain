@@ -18,7 +18,7 @@ export default function DomainCard({
   dealText,
 }: DomainCardProps) {
   return (
-    <div className="flex justify-between items-center rounded-md p-3 bg-[var(--background)] shadow-sm max-w-full w-full">
+    <div className="flex justify-between items-center rounded-md p-2 bg-[var(--background)] shadow-sm max-w-full w-full">
       
       {/* LEFT SIDE */}
       <div className="flex-1 pr-3">
@@ -28,7 +28,7 @@ export default function DomainCard({
           {offers.map((offer, i) => (
             <span
               key={i}
-              className="text-[9px] px-1 py-0.5 rounded bg-[var(--main-color-2)] text-black"
+              className="text-[9px] px-1 py-0.5 rounded bg-[var(--main-color-1)] text-white"
             >
               {offer}
             </span>
@@ -48,7 +48,7 @@ export default function DomainCard({
         
         {/* Price and Renew (no color, no border) */}
         <div className="text-right leading-tight">
-          <div className="text-lg font-bold">{price}</div>
+          <div className="text-base font-bold">{price}</div>
           {renewPrice && (
             <div className="text-[9px] opacity-70">
               renew ${renewPrice}/yr
@@ -57,7 +57,7 @@ export default function DomainCard({
         </div>
 
         {/* Add to cart icon in separate colored box */}
-        <div className="bg-[var(--main-color-1)] p-2 rounded-md flex items-center justify-center">
+        <div className="bg-[var(--main-color-1)] p-1 rounded-md flex items-center justify-center">
           <button
             title="Add to cart"
             className="p-2 transition hover:opacity-90"
@@ -67,6 +67,7 @@ export default function DomainCard({
               alt="Add to cart"
               width={24}
               height={24}
+            className="filter brightness-0 invert"
             />
           </button>
         </div>
