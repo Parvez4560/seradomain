@@ -5,15 +5,15 @@ import DomainCard from "./DomainCard";
 const TLDS = [
   {
     tld: ".com",
-    price: "9.98",
-    renew: "14.48",
-    offer: ["40% OFF"],
-    dealText: "ONLY $18.98 FOR 2 YEARS",
+    price: "9.18",
+    renew: "12.98",
+    dealText: "ONLY $21.50 FOR 2 YEARS",
   },
   {
     tld: ".net",
-    price: "12.50",
-    renew: "15.00",
+    price: "12.98",
+    renew: "15.98",
+    offer: ["40% OFF"],
   },
   {
     tld: ".org",
@@ -36,11 +36,13 @@ interface Props {
 export default function DomainResults({ searchValue }: Props) {
   if (!searchValue.includes(".")) return null;
 
-  const [name, searchedTld] = searchValue.split(".");
+  const parts = searchValue.split(".");
+  const name = parts[0] || "";
+  const searchedTld = parts[1] || "";
 
   const sorted = [
-    ...TLDS.filter(t => t.tld === `.${searchedTld}`),
-    ...TLDS.filter(t => t.tld !== `.${searchedTld}`),
+    ...TLDS.filter((t) => t.tld === `.${searchedTld}`),
+    ...TLDS.filter((t) => t.tld !== `.${searchedTld}`),
   ];
 
   return (

@@ -10,7 +10,10 @@ export default function SearchContent() {
 
   return (
     <>
-      <DomainSearch initialQuery={query} />
+      {/* Search Input */}
+      <DomainSearch initialQuery={query} updateURL={false} />
+
+      {/* Show results only if query is valid */}
       {query && <DomainResults searchValue={query} />}
     </>
   );

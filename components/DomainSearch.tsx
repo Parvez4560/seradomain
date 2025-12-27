@@ -20,12 +20,9 @@ export default function DomainSearch({
     if (!query.trim()) return;
 
     if (updateURL) {
-      // নতুন search করার জন্য URL push
       router.push(`/search?domain=${encodeURIComponent(query)}`);
     } else {
-      // শুধু value ব্যবহার হবে, URL change হবে না
       console.log("Search value used:", query);
-      // এখানে আপনি পরবর্তী কাজ করতে পারবেন
     }
   };
 
@@ -36,7 +33,6 @@ export default function DomainSearch({
   return (
     <div className="w-full max-w-xl mx-auto bg-[var(--background)]">
       <div className="flex rounded-md overflow-hidden border border-gray-300 dark:border-gray-600 shadow-md">
-        {/* Input field */}
         <input
           type="text"
           placeholder="Search for a domain..."
@@ -45,8 +41,6 @@ export default function DomainSearch({
           onKeyDown={handleKeyPress}
           className="flex-1 px-4 py-3 bg-[var(--background)] text-[var(--foreground)] placeholder-gray-400 focus:outline-none"
         />
-
-        {/* Search button with icon */}
         <button
           onClick={handleSearch}
           className="bg-[var(--main-color-2)] px-5 py-3 flex items-center justify-center transition-colors hover:bg-[var(--main-color-1)]"
