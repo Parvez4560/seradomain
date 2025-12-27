@@ -60,12 +60,16 @@ export default function SlideMenu({ open, onClose }: Props) {
             <div key={item.name} className="flex flex-col">
               {item.subMenu ? (
                 <button
-                  onClick={() => setDomainsOpen(true)}
-                  className="flex items-center justify-between py-2 hover:text-[var(--main-color-2)] transition-colors"
-                >
-                  <span>{item.name}</span>
-                  <span className="text-lg">›</span>
-                </button>
+  onClick={() => setDomainsOpen(true)}
+  className="flex items-center justify-between py-2 hover:text-[var(--main-color-2)] transition-colors"
+>
+  <span>{item.name}</span>
+  <img
+    src="/interface-icons/angle-right.svg"
+    alt="Arrow"
+    className="w-4 h-4"
+  />
+</button>
               ) : (
                 <Link
                   href={item.href!}
