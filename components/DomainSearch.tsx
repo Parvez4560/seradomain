@@ -1,29 +1,24 @@
+// DomainSearch.tsx
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 interface Props {
   initialQuery?: string;
-  updateURL?: boolean; // default true
+  updateURL?: boolean;
+  onSearch?: (val: string) => void;
 }
 
-export default function DomainSearch({
-  initialQuery = "",
-  updateURL = true,
-}: Props) {
+export default function DomainSearch({ initialQuery = "", updateURL = true, onSearch }: Props) {
   const [query, setQuery] = useState(initialQuery);
-  const router = useRouter();
 
   const handleSearch = () => {
     if (!query.trim()) return;
-
     if (updateURL) {
-      router.push(`/search?domain=${encodeURIComponent(query)}`);
-    } else {
-      console.log("Search value used:", query);
+      console.log("Router push:", query);
     }
+    if (onSearch) onSearch(query);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {

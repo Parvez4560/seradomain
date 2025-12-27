@@ -13,19 +13,26 @@ const TLDS = [
     tld: ".net",
     price: "12.98",
     renew: "15.98",
-    offer: ["40% OFF"],
-  },
-  {
-    tld: ".org",
-    price: "11.99",
-    renew: "14.99",
     offer: ["Popular"],
   },
   {
+    tld: ".org",
+    price: "9.48",
+    renew: "14.98",
+  
+  },
+  {
     tld: ".xyz",
-    price: "1.99",
-    renew: "9.99",
-    offer: ["New"],
+    price: "1.98",
+    renew: "19.80",
+    offer: ["90% OFF"],
+  },
+  {
+    tld: ".tv",
+    price: "34.98",
+    renew: "38.00",
+    offer: ["15% OFF"],
+    dealText: "ONLY $108 FOR 3 YEARS",
   },
 ];
 
@@ -34,7 +41,6 @@ interface Props {
 }
 
 export default function DomainResults({ searchValue }: Props) {
-  if (!searchValue.includes(".")) return null;
 
   const parts = searchValue.split(".");
   const name = parts[0] || "";

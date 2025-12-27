@@ -1,20 +1,25 @@
+// SearchContent.tsx
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { useState, useEffect } from "react";
 import DomainSearch from "./DomainSearch";
 import DomainResults from "./DomainResults";
+import { useSearchParams } from "next/navigation";
 
 export default function SearchContent() {
   const searchParams = useSearchParams();
-  const query = searchParams.get("domain") || "";
+  const initialQuery = searchParams.get("domain") || "";
+
+  const [searchValue, setSearchValue] = useState(initialQuery);
 
   return (
     <>
-      {/* Search Input */}
-      <DomainSearch initialQuery={query} updateURL={false} />
-
-      {/* Show results only if query is valid */}
-      {query && <DomainResults searchValue={query} />}
+      <DomainSearch
+        initialQuery={searchValue}
+        updateURL={false}
+        onSearch={(val: string) => setSearchValue(val)}
+      />
+      <DomainResults searchValue={searchValue} />
     </>
   );
 }
