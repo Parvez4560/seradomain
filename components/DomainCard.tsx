@@ -23,8 +23,8 @@ export default function DomainCard({
       {/* LEFT SIDE */}
       <div className="flex-1 pr-3">
         {/* Domain name + badges */}
-        <div className="flex items-center gap-1">
-          <span className="text-sm font-semibold truncate">{name}</span>
+        <div className="flex flex-wrap items-center gap-1">
+          <span className="text-sm font-semibold break-all whitespace-normal">{name}</span>
           {offers.map((offer, i) => (
             <span
               key={i}
