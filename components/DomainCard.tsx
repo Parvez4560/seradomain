@@ -18,7 +18,7 @@ export default function DomainCard({
   dealText,
 }: DomainCardProps) {
   return (
-    <div className="flex justify-between items-center rounded-md p-2 bg-[var(--background)] shadow-sm max-w-full w-full">
+    <div className="flex justify-between items-center rounded-md p-2 bg-[var(--background)] border border-gray-300 dark:border-gray-600 shadow-sm max-w-full w-full">
       
       {/* LEFT SIDE */}
       <div className="flex-1 pr-3">
