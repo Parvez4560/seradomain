@@ -1,8 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import SlideMenu from "./SideMenu";
+
+// SVG Import
+import MenuIcon from '../icons/menu-burger.svg';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,29 +16,23 @@ export default function Navbar() {
 
           {/* Left: Logo + Name */}
           <div className="flex items-center gap-3">
-            <Image
+            <img
               src="/icons/sera-domain.png"
               alt="Sera Domain"
-              width={32}
-              height={32}
+              className="w-8 h-8"
             />
             <span className="text-xl font-semibold text-[var(--foreground)]">
               Sera Domain
             </span>
           </div>
 
+          {/* Menu Button */}
           <button
             onClick={() => setMenuOpen(true)}
             className="flex items-center justify-center w-8 h-8 hover:opacity-90"
             aria-label="Open Menu"
           >
-            <Image
-              src="/interface-icons/menu-burger.svg"
-              alt="Menu"
-              width={24}
-              height={24}
-              className=""
-            />
+            <MenuIcon className="w-6 h-6 text-[var(--foreground)]" />
           </button>
         </div>
       </nav>
