@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 import SlideMenu from "./SideMenu";
-
-// SVG Import
 import MenuIcon from '../interface-icons/menu-burger.svg';
 
 export default function Navbar() {
