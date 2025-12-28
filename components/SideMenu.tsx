@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 import DomainsSubMenu from "./DomainsSubMenu";
 
 // SVG Import
-import CrossIcon from '../icons/cross.svg';
-import ArrowIcon from '../icons/angle-right.svg';
+import CrossIcon from '../interface-icons/cross.svg';
+import ArrowIcon from '../interface-icons/angle-right.svg';
 
 type Props = {
   open: boolean;

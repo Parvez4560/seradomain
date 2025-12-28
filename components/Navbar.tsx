@@ -4,7 +4,7 @@ import { useState } from "react";
 import SlideMenu from "./SideMenu";
 
 // SVG Import
-import MenuIcon from '../icons/menu-burger.svg';
+import MenuIcon from '../interface-icons/menu-burger.svg';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
