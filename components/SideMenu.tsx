@@ -4,10 +4,6 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import DomainsSubMenu from "./DomainsSubMenu";
 
-// SVG Import
-import CrossIcon from '../interface-icons/cross.svg';
-import ArrowIcon from '../interface-icons/angle-right.svg';
-
 type Props = {
   open: boolean;
   onClose: () => void;
@@ -51,9 +47,11 @@ export default function SlideMenu({ open, onClose }: Props) {
         {/* Header */}
         <div className="flex items-center justify-between border-b border-[var(--main-color-2)] px-6 py-4">
           <h3 className="text-lg font-semibold">Menu</h3>
-          <button onClick={handleClose} className="p-2">
-            <CrossIcon className="w-5 h-5 text-[var(--foreground)]" />
-          </button>
+            <button onClick={handleClose} className="p-2">
+              <img src="/interface-icons/cross.svg"
+                alt="Close"
+                className="w-5 h-5" />
+            </button>
         </div>
 
         {/* Menu Items */}
@@ -66,7 +64,11 @@ export default function SlideMenu({ open, onClose }: Props) {
                   className="flex items-center justify-between py-2 hover:text-[var(--main-color-2)] transition-colors"
                 >
                   <span>{item.name}</span>
-                  <ArrowIcon className="w-4 h-4 text-[var(--foreground)]" />
+                  <img
+                    src="/interface-icons/angle-right.svg" 
+                    alt="Arrow"
+                    className="w-4 h-4"
+                  />
                 </button>
               ) : (
                 <Link
