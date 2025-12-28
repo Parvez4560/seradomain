@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import SlideMenu from "./SideMenu";
+import MenuIcon from "./icons/MenuIcon";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,13 +31,7 @@ export default function Navbar() {
             className="flex items-center justify-center w-8 h-8 hover:opacity-90"
             aria-label="Open Menu"
           >
-            <Image
-              src="/interface-icons/menu-burger.svg"
-              alt="Menu"
-              width={24}
-              height={24}
-              className=""
-            />
+            <MenuIcon className="w-6 h-6 text-[var(--foreground)]" />
           </button>
         </div>
       </nav>
