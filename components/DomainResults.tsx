@@ -32,7 +32,7 @@ const TLDS = [
     price: "34.98",
     renew: "38.00",
     offer: ["15% OFF"],
-    dealText: "ONLY $108 FOR 3 YEARS",
+    dealText: "ONLY $108.00 FOR 3 YEARS",
   },
 ];
 
