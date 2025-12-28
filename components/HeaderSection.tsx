@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+import SearchIconRightCorner from "./icons/SearchIconRightCorner";
 
 export default function HeaderSection() {
   const [query, setQuery] = useState("");
@@ -10,7 +10,6 @@ export default function HeaderSection() {
 
   const handleSearch = () => {
     if (query.trim() !== "") {
-      // সার্চ টেক্সট নিয়ে নতুন পেজে যাওয়া
       router.push(`/search?domain=${encodeURIComponent(query)}`);
     }
   };
@@ -39,15 +38,9 @@ export default function HeaderSection() {
           />
           <button
            onClick={handleSearch}
-           className="bg-[var(--main-color-2)] px-6 py-3 flex items-center justify-center transition-colors hover:bg-[var(--main-color-1)]"
+           className="bg-[var(--main-color-1)] px-6 py-3 flex items-center justify-center transition-colors hover:bg-[var(--main-color-1)]"
           >
-          <Image
-           src="/interface-icons/search.svg"
-           alt="Search"
-           width={25}
-           height={25}
-           className="filter brightness-0 invert"
-          />
+          <SearchIconRightCorner className="w-6 h-6 text-white" />
           </button>
         </div>
 

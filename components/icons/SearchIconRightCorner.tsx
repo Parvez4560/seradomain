@@ -1,12 +1,27 @@
-export default function SearchIconCenter({ className }: { className?: string }) {
+export default function SearchIconCenter({
+  className,
+}: {
+  className?: string;
+}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       className={className}
-      fill="currentColor"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2.6}
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
-      <path d="M18.9,16.776A10.539,10.539,0,1,0,16.776,18.9l5.1,5.1L24,21.88ZM10.5,18A7.5,7.5,0,1,1,18,10.5,7.507,7.507,0,0,1,10.5,18Z"/>
+      {/* পুরো আইকনকে ভেতর থেকে বড় করা */}
+      <g transform="scale(1.1) translate(-1.2 -1.2)">
+        {/* বৃত্ত */}
+        <circle cx="11" cy="11" r="7.5" />
+
+        {/* লম্বা ডান্ডা */}
+        <line x1="16.8" y1="16.8" x2="22.5" y2="22.5" />
+      </g>
     </svg>
   );
 }
