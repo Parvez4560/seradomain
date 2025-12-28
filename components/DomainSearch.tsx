@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import SearchIconRight from "./icons/SearchIconRightCorner";
 
 interface Props {
   initialQuery?: string;
@@ -40,13 +41,7 @@ export default function DomainSearch({ initialQuery = "", updateURL = true, onSe
           onClick={handleSearch}
           className="bg-[var(--main-color-1)] px-5 py-3 flex items-center justify-center transition-colors hover:bg-[var(--main-color-1)]"
         >
-          <Image
-            src="/interface-icons/search.svg"
-            alt="Search"
-            width={25}
-            height={25}
-            className="filter brightness-0 invert"
-          />
+          <SearchIconRight className="w-6 h-6 text-white" />
         </button>
       </div>
     </div>
