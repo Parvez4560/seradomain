@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import ShoppingCartPlus from "./icons/ShoppingCartPlus";
 
 interface DomainCardProps {
   name: string;
@@ -62,13 +62,7 @@ export default function DomainCard({
             title="Add to cart"
             className="p-2 transition hover:opacity-90"
           >
-            <Image
-              src="/interface-icons/shopping-cart-add.svg"
-              alt="Add to cart"
-              width={24}
-              height={24}
-            className="filter brightness-0 invert"
-            />
+            <ShoppingCartPlus className="w-6 h-6" bodyColor="White" plusColor="White"/>
           </button>
         </div>
       </div>

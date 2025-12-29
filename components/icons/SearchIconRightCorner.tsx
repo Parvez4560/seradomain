@@ -1,4 +1,4 @@
-export default function SearchIconCenter({
+export default function SearchIconRightCorner({
   className,
 }: {
   className?: string;
