@@ -1,0 +1,60 @@
+.tld-cards-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.cards-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.tld-card {
+  flex: 0 0 250px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  position: relative;
+}
+
+.tld-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+  position: relative;
+  left: 8px; /* icon হালকা ডানদিকে সরানো */
+}
+
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 14px;
+}
+
+.discount {
+  color: #ff3e00;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.current-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.per-year {
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 2px;
+  color: #666;
+}
