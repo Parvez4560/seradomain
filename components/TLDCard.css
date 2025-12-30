@@ -1,8 +1,11 @@
+/* Container */
 .tld-cards-container {
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
+/* Slider */
 .cards-slider {
   display: flex;
   gap: 20px;
@@ -10,51 +13,94 @@
   padding-bottom: 10px;
 }
 
-.tld-card {
-  flex: 0 0 250px;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  padding: 15px;
-  position: relative;
+/* Hide scrollbar */
+.cards-slider::-webkit-scrollbar {
+  display: none;
+}
+.cards-slider {
+  scrollbar-width: none;
 }
 
+/* Card */
+.tld-card {
+  flex: 0 0 250px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Dark mode card */
+.dark .tld-card {
+  background-color: #1e2a3a;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+/* Hover effect */
+.tld-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Icon */
 .tld-icon {
   width: 50px;
   height: 50px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   position: relative;
-  left: 8px; /* icon হালকা ডানদিকে সরানো */
+  left: 8px;
+  color: #000;
 }
 
+.dark .tld-icon {
+  color: #ffffff;
+}
+
+/* Price row */
 .price-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
+/* Old price */
 .original-price {
+  font-size: 14px;
+  color: #8a8a8a;
   text-decoration: line-through;
-  color: #999;
-  font-size: 14px;
 }
 
+.dark .original-price {
+  color: #9aa4af;
+}
+
+/* Discount */
 .discount {
-  color: #ff3e00;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.current-price {
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 700;
-  color: #333;
+  color: #ff3e00;
 }
 
+/* Current price */
+.current-price {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111;
+}
+
+.dark .current-price {
+  color: #ffffff;
+}
+
+/* /year */
 .per-year {
   font-size: 12px;
   font-weight: 400;
-  margin-left: 2px;
+  margin-left: 3px;
   color: #666;
+}
+
+.dark .per-year {
+  color: #cfd8e0;
 }

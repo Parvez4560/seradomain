@@ -3,7 +3,6 @@
 import React from "react";
 import "./TLDCard.css";
 
-// React icon components import
 import DotCom from "./icons/DotCom";
 import DotNet from "./icons/DotNet";
 import DotOrg from "./icons/DotOrg";
@@ -22,22 +21,21 @@ const domains: Domain[] = [
   { id: 3, Icon: DotOrg, originalPrice: 11.0, discountPercent: 30, currentPrice: 7.70 },
 ];
 
-const TLDCard: React.FC = () => {
+export default function TLDCard() {
   return (
     <div className="tld-cards-container">
       <div className="cards-slider">
         {domains.map((domain) => (
           <div className="tld-card" key={domain.id}>
-            {/* Icon component */}
             <domain.Icon className="tld-icon" />
 
-            {/* Price Section */}
             <div className="price-section">
-              <span className="original-price">${domain.originalPrice.toFixed(2)}</span>
+              <span className="original-price">
+                ${domain.originalPrice.toFixed(2)}
+              </span>
               <span className="discount">SAVE {domain.discountPercent}%</span>
             </div>
 
-            {/* Current Price */}
             <div className="current-price">
               ${domain.currentPrice.toFixed(2)}
               <span className="per-year">/year</span>
@@ -47,6 +45,4 @@ const TLDCard: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default TLDCard;
+}
