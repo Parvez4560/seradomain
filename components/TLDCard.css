@@ -11,14 +11,9 @@
   gap: 20px;
   overflow-x: auto;
   padding-bottom: 10px;
-}
-
-/* Hide scrollbar */
-.cards-slider::-webkit-scrollbar {
-  display: none;
-}
-.cards-slider {
-  scrollbar-width: none;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
 }
 
 /* Card */
@@ -28,13 +23,16 @@
   border-radius: 12px;
   padding: 15px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+              background-color 0.3s ease, color 0.3s ease;
+  scroll-snap-align: start;
 }
 
 /* Dark mode card */
 .dark .tld-card {
-  background-color: #1e2a3a;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  background-color: #1E2A3A; /* ডার্ক ব্লু-গ্রে */
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3); /* subtle shadow */
+  color: #ffffff;
 }
 
 /* Hover effect */
@@ -50,10 +48,11 @@
   position: relative;
   left: 8px;
   color: #000;
+  transition: color 0.3s ease;
 }
 
 .dark .tld-icon {
-  color: #ffffff;
+  color: #a0cfff; /* হালকা ব্লু */
 }
 
 /* Price row */
@@ -69,10 +68,11 @@
   font-size: 14px;
   color: #8a8a8a;
   text-decoration: line-through;
+  transition: color 0.3s ease;
 }
 
 .dark .original-price {
-  color: #9aa4af;
+  color: #cfd8e0;
 }
 
 /* Discount */
@@ -80,6 +80,11 @@
   font-size: 13px;
   font-weight: 700;
   color: #ff3e00;
+  transition: color 0.3s ease;
+}
+
+.dark .discount {
+  color: #ff7a59;
 }
 
 /* Current price */
@@ -87,6 +92,7 @@
   font-size: 20px;
   font-weight: 800;
   color: #111;
+  transition: color 0.3s ease;
 }
 
 .dark .current-price {
@@ -99,6 +105,7 @@
   font-weight: 400;
   margin-left: 3px;
   color: #666;
+  transition: color 0.3s ease;
 }
 
 .dark .per-year {
