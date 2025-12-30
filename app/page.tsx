@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import HeaderSection from "../components/HeaderSection";
 import FeaturesSection from "../components/FeaturesSection";
 import FooterSection from "../components/FooterSection";
+import TLDCard from "../components/TLDCard";
 
 export default function Home() {
   return (
@@ -14,7 +15,9 @@ export default function Home() {
 
       {/* বাকি কনটেন্ট */}
         <HeaderSection />
+        <TLDCard />
         <FeaturesSection />
+
       <FooterSection />
     </div>
   );
