@@ -21,11 +21,21 @@ const domains: Domain[] = [
   { id: 3, Icon: DotOrg, originalPrice: 11.0, discountPercent: 30, currentPrice: 7.70 },
 ];
 
-interface TLDCardProps {
-  isDarkMode: boolean; // dark mode state
-}
+export default function TLDCard() {
+  const [isDarkMode, setIsDarkMode] = React.useState(false);
 
-export default function TLDCard({ isDarkMode }: TLDCardProps) {
+  React.useEffect(() => {
+    // System dark mode detect
+    const match = window.matchMedia("(prefers-color-scheme: dark)");
+    setIsDarkMode(match.matches);
+
+    // Listen to changes
+    const listener = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
+    match.addEventListener("change", listener);
+
+    return () => match.removeEventListener("change", listener);
+  }, []);
+
   return (
     <div className={isDarkMode ? "dark tld-cards-container" : "tld-cards-container"}>
       <div className="cards-slider">
