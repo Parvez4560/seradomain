@@ -16,13 +16,13 @@ export default function Navbar() {
           {/* Left: Logo + Name */}
           <div className="flex items-center gap-3">
             <Image
-              src="/icons/sera-domain.png"
+              src="/seradomain.png"
               alt="SeraDomain"
               width={32}
               height={32}
             />
             <span className="text-xl font-semibold text-[var(--foreground)]">
-              Sera Domain
+              SeraDomain
             </span>
           </div>
 
