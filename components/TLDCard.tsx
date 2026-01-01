@@ -21,9 +21,13 @@ const domains: Domain[] = [
   { id: 3, Icon: DotOrg, originalPrice: 11.0, discountPercent: 30, currentPrice: 7.70 },
 ];
 
-export default function TLDCard() {
+interface TLDCardProps {
+  isDarkMode: boolean; // dark mode state
+}
+
+export default function TLDCard({ isDarkMode }: TLDCardProps) {
   return (
-    <div className="tld-cards-container">
+    <div className={isDarkMode ? "dark tld-cards-container" : "tld-cards-container"}>
       <div className="cards-slider">
         {domains.map((domain) => (
           <div className="tld-card" key={domain.id}>

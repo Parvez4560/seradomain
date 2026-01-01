@@ -3,13 +3,11 @@
 ========================== */
 .tld-cards-container {
   padding: 20px;
-  background-color: var(--background); /* Light mode ব্যাকগ্রাউন্ড */
-  color: var(--foreground);            /* Light mode লেখা */
+  background-color: var(--background); /* Light mode background */
+  color: var(--foreground);            /* Light mode text */
 }
 
-/* ==========================
-   Slider
-========================== */
+/* Slider */
 .cards-slider {
   display: flex;
   gap: 20px;
@@ -20,15 +18,13 @@
   scroll-snap-type: x mandatory;
 }
 
-/* ==========================
-   Card - Light Mode
-========================== */
+/* Card - Light Mode */
 .tld-card {
   flex: 0 0 250px;
-  background-color: #ffffff;           /* Light mode কার্ড ব্যাকগ্রাউন্ড */
+  background-color: #ffffff;
   border-radius: 12px;
   padding: 15px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
   transition: transform 0.25s ease,
               box-shadow 0.25s ease,
               background-color 0.3s ease,
@@ -36,7 +32,7 @@
   scroll-snap-align: start;
 }
 
-/* Hover effect */
+/* Hover */
 .tld-card:hover {
   transform: translateY(-4px);
 }
@@ -48,11 +44,11 @@
   margin-bottom: 14px;
   position: relative;
   left: 8px;
-  color: #000; /* Light mode icon color */
+  color: #000; /* Light mode icon */
   transition: color 0.3s ease;
 }
 
-/* Price section */
+/* Price row */
 .price-section {
   display: flex;
   justify-content: space-between;
@@ -60,7 +56,7 @@
   margin-bottom: 8px;
 }
 
-/* Original price - Light mode */
+/* Old price */
 .original-price {
   font-size: 14px;
   color: #8a8a8a;
@@ -68,7 +64,7 @@
   transition: color 0.3s ease;
 }
 
-/* Discount - Light mode */
+/* Discount */
 .discount {
   font-size: 13px;
   font-weight: 700;
@@ -76,7 +72,7 @@
   transition: color 0.3s ease;
 }
 
-/* Current price - Light mode */
+/* Current price */
 .current-price {
   font-size: 20px;
   font-weight: 800;
@@ -84,7 +80,7 @@
   transition: color 0.3s ease;
 }
 
-/* Per year text - Light mode */
+/* /year */
 .per-year {
   font-size: 12px;
   font-weight: 400;
@@ -97,27 +93,17 @@
    Dark Mode
 ========================== */
 .dark .tld-card {
-  background-color: #1E2A3A; /* Dark mode কার্ড ব্যাকগ্রাউন্ড */
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3); /* subtle shadow */
-  color: #ffffff; /* সমস্ত লেখা ডার্ক মোডে সাদা */
+  background-color: #1E2A3A; /* Dark mode card */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
 }
 
 .dark .tld-icon {
-  color: #ffffff;
+  color: #a0cfff; /* TLD icon রঙ, হালকা ব্লু */
 }
 
-.dark .original-price {
-  color: #ffffff;
-}
-
+.dark .original-price,
+.dark .current-price,
+.dark .per-year,
 .dark .discount {
-  color: #ffffff;
-}
-
-.dark .current-price {
-  color: #ffffff;
-}
-
-.dark .per-year {
-  color: #ffffff;
+  color: #ffffff; /* অন্যান্য লেখা সাদা */
 }
