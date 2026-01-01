@@ -1,11 +1,15 @@
-/* Container */
+/* ==========================
+   Container
+========================== */
 .tld-cards-container {
   padding: 20px;
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: var(--background); /* Light mode ব্যাকগ্রাউন্ড */
+  color: var(--foreground);            /* Light mode লেখা */
 }
 
-/* Slider */
+/* ==========================
+   Slider
+========================== */
 .cards-slider {
   display: flex;
   gap: 20px;
@@ -16,23 +20,20 @@
   scroll-snap-type: x mandatory;
 }
 
-/* Card */
+/* ==========================
+   Card - Light Mode
+========================== */
 .tld-card {
   flex: 0 0 250px;
-  background-color: #ffffff;
+  background-color: #ffffff;           /* Light mode কার্ড ব্যাকগ্রাউন্ড */
   border-radius: 12px;
   padding: 15px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-  transition: transform 0.25s ease, box-shadow 0.25s ease,
-              background-color 0.3s ease, color 0.3s ease;
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease,
+              background-color 0.3s ease,
+              color 0.3s ease;
   scroll-snap-align: start;
-}
-
-/* Dark mode card */
-.dark .tld-card {
-  background-color: #1E2A3A; /* ডার্ক ব্লু-গ্রে */
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3); /* subtle shadow */
-  color: #ffffff;
 }
 
 /* Hover effect */
@@ -47,15 +48,11 @@
   margin-bottom: 14px;
   position: relative;
   left: 8px;
-  color: #000;
+  color: #000; /* Light mode icon color */
   transition: color 0.3s ease;
 }
 
-.dark .tld-icon {
-  color: #a0cfff; /* হালকা ব্লু */
-}
-
-/* Price row */
+/* Price section */
 .price-section {
   display: flex;
   justify-content: space-between;
@@ -63,7 +60,7 @@
   margin-bottom: 8px;
 }
 
-/* Old price */
+/* Original price - Light mode */
 .original-price {
   font-size: 14px;
   color: #8a8a8a;
@@ -71,11 +68,7 @@
   transition: color 0.3s ease;
 }
 
-.dark .original-price {
-  color: #cfd8e0;
-}
-
-/* Discount */
+/* Discount - Light mode */
 .discount {
   font-size: 13px;
   font-weight: 700;
@@ -83,11 +76,7 @@
   transition: color 0.3s ease;
 }
 
-.dark .discount {
-  color: #ff7a59;
-}
-
-/* Current price */
+/* Current price - Light mode */
 .current-price {
   font-size: 20px;
   font-weight: 800;
@@ -95,11 +84,7 @@
   transition: color 0.3s ease;
 }
 
-.dark .current-price {
-  color: #ffffff;
-}
-
-/* /year */
+/* Per year text - Light mode */
 .per-year {
   font-size: 12px;
   font-weight: 400;
@@ -108,6 +93,31 @@
   transition: color 0.3s ease;
 }
 
+/* ==========================
+   Dark Mode
+========================== */
+.dark .tld-card {
+  background-color: #1E2A3A; /* Dark mode কার্ড ব্যাকগ্রাউন্ড */
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3); /* subtle shadow */
+  color: #ffffff; /* সমস্ত লেখা ডার্ক মোডে সাদা */
+}
+
+.dark .tld-icon {
+  color: #ffffff;
+}
+
+.dark .original-price {
+  color: #ffffff;
+}
+
+.dark .discount {
+  color: #ffffff;
+}
+
+.dark .current-price {
+  color: #ffffff;
+}
+
 .dark .per-year {
-  color: #cfd8e0;
+  color: #ffffff;
 }
