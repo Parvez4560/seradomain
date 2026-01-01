@@ -1,4 +1,3 @@
-// components/icons/DotCom.tsx
 import React from "react";
 
 export default function DotCom({ className }: { className?: string }) {
@@ -9,14 +8,20 @@ export default function DotCom({ className }: { className?: string }) {
       className={className}
       fill="none"
       stroke="currentColor"
-      strokeWidth={2.6}
+      strokeWidth={1.5}  // stroke পাতলা
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      {/* DotCom icon */}
-      <circle cx="12" cy="12" r="10" />
-      <text x="12" y="16" textAnchor="middle" fontSize="6" fontWeight="bold">
-        .COM
+      <text
+        x="12"
+        y="12"
+        textAnchor="middle"
+        dominantBaseline="middle"
+        fontSize="6"
+        fontWeight="300"      // মোটা না, চিকন
+        fontFamily="sans-serif"
+      >
+        .com   {/* ছোট হাতের লেখা */}
       </text>
     </svg>
   );

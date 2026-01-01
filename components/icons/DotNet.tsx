@@ -1,4 +1,3 @@
-// components/icons/DotNet.tsx
 import React from "react";
 
 export default function DotNet({ className }: { className?: string }) {
@@ -9,14 +8,20 @@ export default function DotNet({ className }: { className?: string }) {
       className={className}
       fill="none"
       stroke="currentColor"
-      strokeWidth={2.6}
+      strokeWidth={1.5}
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      {/* DotNet icon */}
-      <circle cx="12" cy="12" r="10" />
-      <text x="12" y="16" textAnchor="middle" fontSize="6" fontWeight="bold">
-        .NET
+      <text
+        x="12"
+        y="12"
+        textAnchor="middle"
+        dominantBaseline="middle"
+        fontSize="6"
+        fontWeight="300"
+        fontFamily="sans-serif"
+      >
+        .net
       </text>
     </svg>
   );
