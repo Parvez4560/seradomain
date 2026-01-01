@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sera Domain",
-  description: "Get the domain at the lowest price in the Sera Domain.",
+  title: "SeraDomain",
+  description: "Get the domain at the lowest price in the SeraDomain.",
 };
 
 export default function RootLayout({

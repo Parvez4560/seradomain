@@ -17,7 +17,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <Image
               src="/icons/sera-domain.png"
-              alt="Sera Domain"
+              alt="SeraDomain"
               width={32}
               height={32}
             />
