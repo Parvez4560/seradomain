@@ -7,7 +7,7 @@ export function normalizeDomain(input: string) {
   v = v.replace(/\s+/g, "");
 
   // 2️⃣ invalid symbol remove (৳ # % etc)
-  v = v.replace(/[৳#$%@&!*^+=~`|\\:;"'<>,?/()[\]{}]/g, "");
+  v = v.replace(/[৳#$%@&!π_£*^+=~¬`√৺|★™©®‌℅°≠×÷॥\\:;"'Π<>,?/()[\]{}]/g, "");
 
   // 3️⃣ punycode decode (যে কোনো label এ xn-- থাকলে)
   if (v.includes("xn--")) {
